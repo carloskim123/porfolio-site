@@ -1,5 +1,5 @@
 import { useState, useEffect, SetStateAction } from "react";
-import { Grid, Box, Image, Link, Text, Input, Skeleton, FormControl } from "@chakra-ui/react";
+import { Grid, Box, Image, Link, Text, Input, Skeleton } from "@chakra-ui/react";
 import { loadNewWindow} from "../../data/helpers";
 import { projects } from "../../data/projects_data";
 import "../../css.css";
@@ -31,6 +31,16 @@ const Projects = () => {
     project.tech_stack.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  const formStyles: React.CSSProperties = {
+    paddingTop: 4,
+    paddingBottom: 4,
+    height: "60px",
+    width: "100%",
+    top: 0,
+    position: "fixed",
+    zIndex: 100
+  }
+
   return (
 
     <Box>
@@ -43,14 +53,9 @@ const Projects = () => {
         position={"fixed"}
         zIndex={40}
       >
-        <FormControl
+        <form
+          style={formStyles}
           onSubmit={(e) => e.preventDefault()}
-          px={4}
-          h="60px"
-          w={"100%"}
-          top={0}
-          position={"fixed"}
-          zIndex={100}
         >
           <Input
             backdropFilter="blur(20px)"
@@ -70,7 +75,7 @@ const Projects = () => {
             }}
             fontFamily={"Klee One"}
           />
-        </FormControl>
+        </form>
       </Box>
       <motion.div
         initial={{ opacity: 0, x: -90 }}
