@@ -1,0 +1,26 @@
+:root {
+    --light-text-color: #000;
+    /* Default light mode text color */
+    --light-background-color: #d6af8b;
+    /* Default light mode background color */
+
+    --dark-text-color: #000;
+    /* Default dark mode text color */
+    --dark-background-color: #b0966b;
+    /* Default dark mode background color */
+}
+
+
+@media(prefers-color-scheme: dark) {
+    #root, html, .sidebar, .footer, .search-box, .loader-overlay {
+        background-color: var(--dark-background-color);
+        color: var(--dark-text-color)
+    }
+}
+
+@media(prefers-color-scheme: light) {
+    #root, html, .sidebar, .footer, .search-box, .loader-overlay {
+        background-color: var(--light-background-color);
+        color: var(--light-text-color)
+    }
+}
