@@ -10,6 +10,9 @@
     /* Default dark mode background color */
 }
 
+* {
+    -webkit-tap-highlight-color: transparent !important;
+}
 
 @media(prefers-color-scheme: dark) {
     #root, html, .sidebar, .footer, .search-box, .loader-overlay {

@@ -1,21 +1,16 @@
-import { useState, useEffect, SetStateAction } from "react";
-import { Grid, Box, Image, Link, Text, Input, Skeleton } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
+import { Grid, Box, Image, Link, Text, Skeleton } from "@chakra-ui/react";
 import { loadNewWindow} from "../../data/helpers";
 import { projects } from "../../data/projects_data";
 import "../../css.css";
 import { motion} from "framer-motion";
+import {toast, ToastContainer} from 'react-toastify'
+ import 'react-toastify/dist/ReactToastify.css';
 // Projects component
 const Projects = () => {
   // State variables
-  const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-
-
-  // Handle search input
-  const handleSearch = (query: SetStateAction<string>) => {
-    setSearchQuery(query);
-  };
 
   // Simulate loading effect
   useEffect(() => {
@@ -24,59 +19,23 @@ const Projects = () => {
     }, 1000);
   }, []);
 
-  // Filter projects based on the search query
-  const filteredProjects = projects.filter((project) =>
-    project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    project.tech_stack.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
-  const formStyles: React.CSSProperties = {
-    paddingTop: 4,
-    paddingBottom: 4,
-    height: "60px",
-    width: "100%",
-    top: 0,
-    position: "fixed",
-    zIndex: 100
-  }
 
   return (
 
     <Box>
-
-      <Box
-        mt={"3.77rem"}
-        h="60px"
-        top={0}
-        width={"100%"}
-        position={"fixed"}
-        zIndex={40}
-      >
-        <form
-          style={formStyles}
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <Input
-            backdropFilter="blur(20px)"
-            background="rgba(0, 0, 0, 0.001)"
-            variant={"unstyled"}
-            padding={"7px"}
-            fontSize={"20px"}
-            value={searchQuery}
-            onChange={(e) => handleSearch(e.target.value)}
-            placeholder="Search projects"
-            rounded={"none"}
-            borderBottom={"2px solid black"}
-            borderTop={"none"}
-            outline={"none"}
-            _placeholder={{
-              color: "black",
-            }}
-            fontFamily={"Klee One"}
-          />
-        </form>
-      </Box>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        theme="light"
+      />
+      
       <motion.div
         initial={{ opacity: 0, x: -90 }}
         animate={{ opacity: 1, x: 0 }}
@@ -91,11 +50,12 @@ const Projects = () => {
           pt={"4.5rem"}
           pb={"10rem"}
         >
-          {filteredProjects.map((project) => (
-            <>
+          {projects.map((project) => (
+            <div key={project.id}>
               {!isLoading ? (
                 // Project card
                 <Box
+                  onClick={() => project.view_live !== null ? loadNewWindow(project.view_live) : toast.info(`${project.name} project has no live version`)}
                   mb={"3rem"}
                   key={project.id}
                   p={4}
@@ -144,7 +104,7 @@ const Projects = () => {
                 // Loading skeleton
                 <Skeleton height={"445px"} rounded={"none"} />
               )}
-            </>
+            </div>
           ))}
         </Grid>
       </motion.div>

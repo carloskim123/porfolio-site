@@ -18,13 +18,14 @@ import {
 import "../app.css";
 import { MotionWrapper } from "../components/Motion";
 
-export default function Home() {
-  const [dayPeriod, setDayPeriod] = useState("day");
-  const [randomQuote, setRandomQuote] = useState("");
-  const [aboutMe, setAboutMe] = useState("");
 
-  const currentTime = new Date().getHours();
-  const shuffledArray = shuffle(links);
+export default function Home() {
+  const [dayPeriod, setDayPeriod]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("day");
+  const [randomQuote, setRandomQuote]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("");
+  const [aboutMe, setAboutMe]: [string, React.Dispatch<React.SetStateAction<string>>]  = useState("");
+
+  const currentTime:number = new Date().getHours();
+  const shuffledArray : unknown[] = shuffle(links);
 
   useEffect(() => {
     currentDayTime(setDayPeriod, currentTime);
@@ -59,7 +60,7 @@ export default function Home() {
                   Check me out on:
                 </Box>
                 {links &&
-                  shuffledArray.map((link:Link) => (
+                  shuffledArray.map(( link: Link ) => (
                     <Link
                       key={link.url}
                       target="_blank"

@@ -134,3 +134,27 @@ export const aboutMes = [
     }
 ];
 
+// Define styles for the loader overlay
+export const loaderOverlayStyles: React.CSSProperties = {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    justifyContent: "start",
+    alignItems: "start",
+    zIndex: 9999,
+};
+
+// Define styles for the loader
+export const loaderStyles: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: "30vh",
+};
+
+export const isFirstTime = localStorage.getItem("firsTimer");
+export const todaysGreetingSent = localStorage.getItem("todaysGreetingSent")

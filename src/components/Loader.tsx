@@ -3,11 +3,13 @@ import { Container, Text, Flex, Box } from "@chakra-ui/layout";
 import { ColorRing } from "react-loader-spinner";
 import { currentDayTime, getRandomFromArray } from "../../data/helpers";
 import { daytimeQuotes, nighttimeQuotes } from "../../data/quoteable";
+import { loaderOverlayStyles, loaderStyles } from "../../data/db";
 
 export default function Loader() : React.JSX.Element {
     const [randomQuote, setRandomQuote]: [string, React.Dispatch<React.SetStateAction<string>>] = useState<string>(""); // Initialize state for a random quote
     const [currentTime, setCurrentTime] : [number, React.Dispatch<React.SetStateAction<number>>] = useState<number>(new Date().getHours()); // Initialize state for the current time in hours
     const [dayPeriod, setDayPeriod]: [string, React.Dispatch<React.SetStateAction<string>>] = useState<string>("day"); // Initialize state for the current day period
+
 
     useEffect(() => {
         // Update the current time in state
@@ -23,30 +25,6 @@ export default function Loader() : React.JSX.Element {
         getRandomFromArray(setRandomQuote, currentQuotesArray);
     }, [currentTime, dayPeriod]);
 
-    // Define styles for the loader overlay
-    const loaderOverlayStyles: React.CSSProperties = {
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        justifyContent: "start",
-        alignItems: "start",
-        zIndex: 9999,
-    };
-
-    // Define styles for the loader
-    const loaderStyles: React.CSSProperties = {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: "30vh",
-    };
-
-  
-
 
     return (
         <Box 
@@ -58,8 +36,8 @@ export default function Loader() : React.JSX.Element {
                     {/* Display a color ring loader */}
                     <ColorRing
                         visible={true}
-                        height="94"
-                        width="94"
+                        height="100"
+                        width="100"
                         ariaLabel="blocks-loading"
                         wrapperStyle={{}}
                         wrapperClass="blocks-wrapper"

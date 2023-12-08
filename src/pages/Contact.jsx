@@ -62,9 +62,8 @@ export default function Contact() {
         )
         .then(
           (result) => {
-            console.log(result.text);
             navigate("/success");
-
+            return result;
           }, (error) => {
             navigate('/error');
             throw new Error(error.message);

@@ -1,9 +1,5 @@
 import { motion, MotionProps } from "framer-motion";
 
-
-
-
-
 export const MotionWrapper: React.FC<MotionWrapperProps & MotionProps> = ({ children }) => {
     return ( 
         <motion.div

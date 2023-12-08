@@ -1,15 +1,14 @@
+
 // Import necessary modules and components
 import { useEffect, useState } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 
 // Import local components
 import Loader from '../components/Loader';
 import Footer from '../components/Footer';
-
-// Import route data
 import { routes } from '../../data/db';
 
 // Import styling
@@ -18,22 +17,22 @@ import "../../css.css"
 
 const RootLayout = () => {
   const [isLoading, setIsLoading] = useState(true);
-
   const [showMenu, setShowMenu] = useState(false);
-
   const [currentTime, setCurrentTime] = useState(new Date());
 
+  const navigate: NavigateFunction = useNavigate();
 
-  const navigate = useNavigate();
 
   // Simulate loading for 3 seconds and then set 'isLoading' to false
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 2000);
+
+
 
     // Update 'currentTime' every second
-    const intervalId = setInterval(() => {
+    const intervalId: number = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
 
@@ -70,6 +69,7 @@ const RootLayout = () => {
   return (
     <div>
       <Flex flexDirection="column" minH="100vh" cursor="auto">
+
         <Box
           py={2}
           px={4}
@@ -130,15 +130,15 @@ const RootLayout = () => {
           <Box
             cursor="pointer"
             position="fixed"
-            top={showMenu ? "0px" : "-100vh"} // Use 'top' property
+            top={showMenu ? "0px" : "-100vh"} 
             left="0"
             zIndex={100}
             w="100%"
             h="100%"
-            backdropFilter="blur(10px)"
-            background="rgba(0, 0, 0, 0.01)"
+            backdropFilter="blur(2px)"
+            background="rgba(0, 0, 0, 0.02)"
             borderTop="2px solid #000"
-            transition="top 100ms ease" // Use 'top' for the transition
+            transition="top 450ms ease" 
           >
             <Box
               className="sidebar"
@@ -152,7 +152,7 @@ const RootLayout = () => {
               gap=".5rem"
             >
               <Flex>
-                <Box mr={"auto"} fontSize={"23px"}>Carlos.K 👋🏽<Text fontSize={"14px"}>{currentTime.toLocaleTimeString()}</Text></Box>
+                <Box mr={"auto"} fontSize={"23px"}>Carlos Kirui 👋🏽<Text fontSize={"14px"}>{currentTime.toLocaleTimeString()}</Text></Box>
                 <Box
                   onClick={closeMobileMenu}
                   cursor="pointer"
