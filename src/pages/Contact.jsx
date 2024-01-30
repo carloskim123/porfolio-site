@@ -72,7 +72,7 @@ export default function Contact() {
     }
   };
 
-  return (
+return (
     <>
       <MotionWrapper>
         <Container mt={"3rem"}>
@@ -90,7 +90,8 @@ export default function Contact() {
             p={4}
             rounded="md"
           >
-            <form onSubmit={handleSubmit} ref={form} disabled>
+            <form onSubmit={handleSubmit} ref={form}>
+              {/* Remove isDisabled prop from input elements */}
               <FormControl id="user_name" mb={4}>
                 <FormLabel>Name</FormLabel>
                 <Input
@@ -100,12 +101,9 @@ export default function Contact() {
                   name="user_name"
                   borderColor="black.300"
                   focusBorderColor="blue.400"
-                  _hover={
-                    {
-                      borderColor: "blue.400",
-                    }
-                  }
-                  isDisabled={isSubmitted}
+                  _hover={{
+                    borderColor: "blue.400",
+                  }}
                 />
                 <Text color="red.500">{formErrors.name}</Text>
               </FormControl>
@@ -117,12 +115,9 @@ export default function Contact() {
                   borderColor="black.300"
                   autoComplete="on"
                   focusBorderColor="blue.400"
-                  _hover={
-                    {
-                      borderColor: "blue.400",
-                    }
-                  }
-                  isDisabled={isSubmitted}
+                  _hover={{
+                    borderColor: "blue.400",
+                  }}
                 />
                 <Text color="red.500">{formErrors.email}</Text>
               </FormControl>
@@ -138,18 +133,14 @@ export default function Contact() {
                   height={"120px"}
                   borderColor="black.300"
                   focusBorderColor="blue.400"
-                  isDisabled={isSubmitted}
-                  _hover={
-                    {
-                      borderColor: "blue.400",
-                    }
-                  }
+                  _hover={{
+                    borderColor: "blue.400",
+                  }}
                 />
                 <Text color="red.500">{formErrors.message}</Text>
               </FormControl>
 
               <Button
-                disabled
                 colorScheme="blue"
                 size="lg"
                 w={"100%"}
@@ -163,8 +154,6 @@ export default function Contact() {
           </Box>
         </Container>
       </MotionWrapper>
-
     </>
-
   );
 }
