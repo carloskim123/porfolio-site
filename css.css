@@ -14,16 +14,20 @@
     -webkit-tap-highlight-color: transparent !important;
 }
 
+
 @media(prefers-color-scheme: dark) {
     #root, html, .sidebar, .footer, .search-box, .loader-overlay {
-        background-color: var(--dark-background-color);
-        color: var(--dark-text-color)
+        background: var(--dark-background-color);
+        color: var(--dark-text-color);
+
+
     }
 }
 
 @media(prefers-color-scheme: light) {
     #root, html, .sidebar, .footer, .search-box, .loader-overlay {
-        background-color: var(--light-background-color);
-        color: var(--light-text-color)
+        background: var(--light-background-color);
+        color: var(--light-text-color);
+
     }
 }

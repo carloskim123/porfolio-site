@@ -12,8 +12,8 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import HasSubmitted from './components/HasSubmitted';
 import Contact from './pages/Contact';
-
 // router and routes
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
