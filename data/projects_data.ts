@@ -16,6 +16,15 @@ export const projects: Project[] = [
         view_live: 'https://carloskim123.github.io/advanced-todo-app/',
         description: "A feature-rich todo app with advanced functionality."
     },
+{
+        name: 'Vinly - Quote sharing application',
+        id: Math.random(),
+        img: '.\Vinly_app.png',
+        tech_stack: 'Typescript, Javascript, Nodejs, Mongodb, React, HTML, CSS...',
+        project_url: 'https://github.com/carloskim123/FRONTEND',
+        view_live: 'https://carloskim123.github.io/FRONTEND#readme/',
+        description: "A feature rich quote sharing application"
+    },
     {
         name: 'Golang Rest Api',
         id: Math.random(),
