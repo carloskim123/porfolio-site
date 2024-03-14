@@ -6,7 +6,16 @@ import tictactoeJava from '../src/img/download.jpeg'
 
 
 export const projects: Project[] = [
-    
+       
+    {
+        name: 'Base64 Encoder - Decoder',
+        id: Math.random(),
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxp_zaKrK2MLWzum8kE-MBn8nsyIsIlXl1mY21mbhv3CEd8oZsu1NNvtYOiYq0Gnb6chE&usqp=CAU',
+        tech_stack: 'Javascript, Html, Css',
+        project_url: 'https://github.com/carloskim123/base64tool',
+        view_live: 'https://b64tool.vercel.app',
+        description: "A simple to use base64 encoding decoding tool"
+    },
     {
         name: 'Advanced Todo App',
         id: Math.random(),
