@@ -10,7 +10,7 @@ export const projects: Project[] = [
     {
         name: 'Base64 Encoder - Decoder',
         id: Math.random(),
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxp_zaKrK2MLWzum8kE-MBn8nsyIsIlXl1mY21mbhv3CEd8oZsu1NNvtYOiYq0Gnb6chE&usqp=CAU',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgr81aiC4_AVLMb225Hw9KAC6tZiINJteMIJeCaUPATUaD7bi2MeLn0ZUxVMfDw3H9z4w:https://www.researchgate.net/publication/336510382/figure/tbl1/AS:813745274105856%401571023400447/Base64-mapping-between-6-bit-values-and-ASCII-characters-value-ASCII-char-value-ASCII_Q320.jpg&usqp=CAU',
         tech_stack: 'Javascript, Html, Css',
         project_url: 'https://github.com/carloskim123/base64tool',
         view_live: 'https://b64tool.vercel.app',
