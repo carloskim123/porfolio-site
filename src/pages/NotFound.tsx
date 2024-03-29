@@ -1,10 +1,10 @@
 import { Container, Text } from "@chakra-ui/react"
 import { useState } from "react"
 import { useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate  } from "react-router-dom"
 
-function NotFound() : React.JSX.Element{
-    const [secondsLeft, setSecondsLeft]: [number,  React.Dispatch<React.SetStateAction<number>>] = useState(10);
+function NotFound(): React.JSX.Element {
+    const [secondsLeft, setSecondsLeft]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(10);
 
     const handleTick = () => {
         setSecondsLeft(secondsLeft - 1);
@@ -15,7 +15,7 @@ function NotFound() : React.JSX.Element{
     useEffect(() => {
         setTimeout(function () {
             navigate("/")
-        }, 5000)
+        }, 10000)
     })
 
     return (

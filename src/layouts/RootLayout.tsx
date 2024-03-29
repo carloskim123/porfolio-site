@@ -130,7 +130,7 @@ const RootLayout = () => {
           <Box
             cursor="pointer"
             position="fixed"
-            top={showMenu ? "0px" : "-100vh"} 
+            top={showMenu ? "0px" : "-100vh"}
             left="0"
             zIndex={100}
             w="100%"
@@ -138,7 +138,7 @@ const RootLayout = () => {
             backdropFilter="blur(2px)"
             background="rgba(0, 0, 0, 0.02)"
             borderTop="2px solid #000"
-            transition="top 450ms ease" 
+            transition="top 450ms ease"
           >
             <Box
               className="sidebar"

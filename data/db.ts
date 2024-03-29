@@ -85,6 +85,8 @@ export const pg_lk: Link[] = [
 export const routes: Link[] = [
     { path: "/", pathname: "Home" },
     { path: "/projects", pathname: "Projects" },
+    { path: "/learning-resources-used", pathname: "Learning Resources" },
+
     { path: "/about", pathname: "About" },
     { path: "/contact", pathname: "Contact" },
 ];
@@ -117,24 +119,24 @@ export const bannerImage = "https://images.unsplash.com/photo-1504805572947-34fa
 
 
 export const aboutMes = [
+    // {
+    //     param: "Hey! 👋🏾 I'm Carlos Kirui, a web developer from Nairobi, Kenya. I've been coding for over 5 years and love building cool stuff for the web. Let's team up and make something awesome together! 💻🚀"
+    // },
     {
-        param: "Greetings! 👋🏾 I'm Carlos Kirui, an enthusiastic problem solver in software development. Passionate about coding, I create solutions that make a difference. 💻🚀",
+        param: "Hi there! 👋🏾 I'm Carlos Kirui, your friendly web guy. I enjoy coding and creating websites that look great and work smoothly. Let's chat and see how we can bring your ideas to life! 🌐✨"
     },
     {
-        param: "Hey there! 👋🏾 Carlos Kirui here, a web development maestro turning ideas into digital reality. With an eye for detail and a love for clean code, I make the web better. 🌐✨",
+        param: "Hey everyone! 👋🏾 Carlos Kirui here, just a guy who loves playing around with code and making websites. Got a project in mind? Let's make it happen! 💡💻"
     },
     {
-        param: "Salut! 👋🏾 I'm Carlos Kirui, a tech aficionado and coding virtuoso. With a love for innovation, I'm geared up to elevate web development. 💡💻",
+        param: "Hi, I'm Carlos Kirui! 👋🏾 I like building websites and making them look good. Let's work together and create something cool! 🌟🚀"
     },
     {
-        param: "Hi, I'm Carlos Kirui! 👋🏾 A dedicated developer with elegant solutions and a love for learning. Join me in creating something extraordinary. 🌟🚀",
-    },
-    {
-        param: "Hola! 👋🏾 Carlos Kirui here—a passionate web developer with curiosity for emerging technologies. Let's build digital wonders together. 💻✨",
+        param: "Yo! 👋🏾 Carlos Kirui here, a web developer ready to help you out. Let's build something awesome for the web! 💻✨"
     }
 ];
 
-// Define styles for the loader overlay
+
 export const loaderOverlayStyles: React.CSSProperties = {
     position: "fixed",
     top: 0,
@@ -147,7 +149,6 @@ export const loaderOverlayStyles: React.CSSProperties = {
     zIndex: 9999,
 };
 
-// Define styles for the loader
 export const loaderStyles: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
@@ -158,3 +159,108 @@ export const loaderStyles: React.CSSProperties = {
 
 export const isFirstTime = localStorage.getItem("firsTimer");
 export const todaysGreetingSent = localStorage.getItem("todaysGreetingSent")
+
+
+export const resources = [
+    {
+        resource_url: 'https://www.udemy.com/course/react-the-complete-guide-incl-redux/',
+        resource_title: 'React - The Complete Guide (incl Hooks, React Router, Redux)',
+        resource_creator: 'Maximilian Schwarzmüller',
+        resource_type: 'Online Course',
+        resource_level: 'Intermediate',
+        resource_description:
+            'Learn React.js from scratch with this comprehensive course covering React basics, advanced topics like Redux, React Router, and more.',
+        resource_duration: '40 hours',
+        resource_language: 'English',
+        resource_rating: '4.7',
+        resource_reviews: '140000',
+        resource_price: '$12.99',
+        resource_certification: false
+    },
+    {
+        resource_url: 'https://www.pluralsight.com/paths/react',
+        resource_title: 'React Learning Path',
+        resource_creator: 'Various Instructors',
+        resource_type: 'Online Course',
+        resource_level: 'Intermediate to Advanced',
+        resource_description:
+            'Pluralsight offers a comprehensive learning path for React, covering everything from the basics to advanced topics like Redux, GraphQL, and more.........',
+        resource_duration: '30+ hours',
+        resource_language: 'English',
+        resource_rating: '4.5',
+        resource_reviews: '25000',
+        resource_price: 'Membership Subscription',
+        resource_certification: true,
+        resource_certification_title: 'Pluralsight Certificate',
+        resource_certification_provider: 'Pluralsight'
+    },
+
+    {
+        resource_url: 'https://www.udemy.com/course/html-css-the-complete-guide/',
+        resource_title: 'Complete HTML and CSS Guide',
+        resource_creator: 'Jonas Schmedtmann',
+        resource_type: 'Online Course',
+        resource_level: 'Beginner to Advanced',
+        resource_description:
+            'This course covers HTML and CSS from scratch, including modern techniques like Flexbox and CSS Grid and more.',
+        resource_duration: '28 hours',
+        resource_language: 'English',
+        resource_rating: '4.7',
+        resource_reviews: '220000',
+        resource_price: '$12.99',
+        resource_certification: true,
+        resource_certification_title: 'Certificate of Completion',
+        resource_certification_provider: 'Udemy'
+    },
+    {
+        resource_url: 'https://www.udemy.com/course/selenium-real-time-examplesinterview-questions/?couponCode=LETSLEARNNOWPP',
+        resource_title: 'Selenium WebDriver with Java -Basics to Advanced+Frameworks',
+        resource_creator: 'Rahul Shetty',
+        resource_type: 'Online Course',
+        resource_level: 'Intermediate to Advanced',
+        resource_description:
+            'Learn Selenium WebDriver with Java for automation testing of web applications, including frameworks like TestNG, JUnit, and Cucumber.',
+        resource_duration: '35 hours',
+        resource_language: 'English',
+        resource_rating: '4.6',
+        resource_reviews: '50000',
+        resource_price: '$12.99',
+        resource_certification: true,
+        resource_certification_title: 'Certificate of Completion',
+        resource_certification_provider: 'Udemy'
+    },
+    {
+        resource_url: 'https://www.udemy.com/course/javascript-beginners-complete-tutorial/',
+        resource_title: 'JavaScript for Beginners - Learn JavaScript Programming',
+        resource_creator: 'John Smilga',
+        resource_type: 'Online Course',
+        resource_level: 'Beginner',
+        resource_description:
+            'This course teaches JavaScript fundamentals for beginners, including variables, data types, functions, and DOM manipulation.',
+        resource_duration: '15 hours',
+        resource_language: 'English',
+        resource_rating: '4.8',
+        resource_reviews: '180000',
+        resource_price: '$12.99',
+        resource_certification: true,
+        resource_certification_title: 'Certificate of Completion',
+        resource_certification_provider: 'Udemy'
+    },
+
+
+    // {
+    //     resource_url: 'https://www.youtube.com/playlist?list=PLuNEz8XtB51K-XAeq4GvzXn2pWI9_8xXq',
+    //     resource_title: 'React Tutorial for Beginners',
+    //     resource_creator: 'Programming with Mosh',
+    //     resource_type: 'YouTube Playlist',
+    //     resource_level: 'Beginner',
+    //     resource_description:
+    //         'This YouTube playlist provides a comprehensive tutorial for beginners to learn React.js, covering topics like components, props, state, and more.',
+    //     resource_duration: '6 hours',
+    //     resource_language: 'English',
+    //     resource_rating: '4.9',
+    //     resource_reviews: '50000',
+    //     resource_price: 'Free',
+    //     resource_certification: false
+    // }
+];

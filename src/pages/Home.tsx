@@ -1,5 +1,5 @@
 import { Image } from "@chakra-ui/image";
-import { Box, Flex, Link, Text, } from "@chakra-ui/layout";
+import { Box, Flex, Link, Text } from "@chakra-ui/layout";
 import { Tooltip } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import {
@@ -15,6 +15,7 @@ import {
   getRandomFromArray
 } from '../../data/helpers';
 
+
 import "../app.css";
 import { MotionWrapper } from "../components/Motion";
 
@@ -22,10 +23,11 @@ import { MotionWrapper } from "../components/Motion";
 export default function Home() {
   const [dayPeriod, setDayPeriod]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("day");
   const [randomQuote, setRandomQuote]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("");
-  const [aboutMe, setAboutMe]: [string, React.Dispatch<React.SetStateAction<string>>]  = useState("");
+  const [aboutMe, setAboutMe]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("");
 
-  const currentTime:number = new Date().getHours();
-  const shuffledArray : unknown[] = shuffle(links);
+  const currentTime: number = new Date().getHours();
+  const shuffledArray: unknown[] = shuffle(links);
+
 
   useEffect(() => {
     currentDayTime(setDayPeriod, currentTime);
@@ -40,7 +42,7 @@ export default function Home() {
   return (
     <MotionWrapper>
       <Box>
- 
+
         <Box
           as="section"
           rounded="md"
@@ -54,13 +56,12 @@ export default function Home() {
           <Flex p={{ base: "20px", md: "40px", sm: "10px" }} maxWidth="764px">
             <Box>
               <Text fontSize={{ base: "19px", lg: "25px", md: "20x", sm: "23px" }}>{aboutMe}</Text>
-
               <Flex gap="1rem" mt="1.5rem" flexWrap="wrap">
                 <Box pt="5px" fontSize="20px">
                   Check me out on:
                 </Box>
                 {links &&
-                  shuffledArray.map(( link: Link ) => (
+                  shuffledArray.map((link: Link) => (
                     <Link
                       key={link.url}
                       target="_blank"
@@ -105,7 +106,12 @@ export default function Home() {
             <Text>{randomQuote}</Text>
           </Flex>
         </Box>
+
+
       </Box>
+
+
+
     </MotionWrapper>
   );
 }

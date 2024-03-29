@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Grid, Box, Image, Link, Text, Skeleton } from "@chakra-ui/react";
-import { loadNewWindow} from "../../data/helpers";
+import { loadNewWindow } from "../../data/helpers";
 import { projects } from "../../data/projects_data";
 import "../../css.css";
-import { motion} from "framer-motion";
-import {toast, ToastContainer} from 'react-toastify'
- import 'react-toastify/dist/ReactToastify.css';
+import { motion } from "framer-motion";
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 // Projects component
 const Projects = () => {
   // State variables
@@ -35,7 +36,7 @@ const Projects = () => {
         draggable
         theme="light"
       />
-      
+
       <motion.div
         initial={{ opacity: 0, x: -90 }}
         animate={{ opacity: 1, x: 0 }}
