@@ -6,17 +6,17 @@ import tictactoeJava from '../src/img/download.jpeg'
 
 
 export const projects: Project[] = [
-
-    // {
-    //     name: 'Advanced Todo App',
-    //     id: Math.random(),
-    //     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxp_zaKrK2MLWzum8kE-MBn8nsyIsIlXl1mY21mbhv3CEd8oZsu1NNvtYOiYq0Gnb6chE&usqp=CAU',
-    //     tech_stack: 'TypeScript, Javascript, Html, Css',
-    //     project_url: 'https://github.com/carloskim123/advanced-todo-app',
-    //     view_live: 'https://carloskim123.github.io/advanced-todo-app/',
-    //     description: "A feature-rich todo app with advanced functionality."
-    // },
+    
     {
+        name: 'Advanced Todo App',
+        id: Math.random(),
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxp_zaKrK2MLWzum8kE-MBn8nsyIsIlXl1mY21mbhv3CEd8oZsu1NNvtYOiYq0Gnb6chE&usqp=CAU',
+        tech_stack: 'TypeScript, Javascript, Html, Css',
+        project_url: 'https://github.com/carloskim123/advanced-todo-app',
+        view_live: 'https://carloskim123.github.io/advanced-todo-app/',
+        description: "A feature-rich todo app with advanced functionality."
+    },
+{
         name: 'Vinly - Quote sharing application',
         id: Math.random(),
         img: '.Vinly_app.png',
