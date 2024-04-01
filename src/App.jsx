@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound';
 import HasSubmitted from './components/HasSubmitted';
 import Contact from './pages/Contact';
 import LearningResources from './pages/LearningResources';
+import TestFeatures from './pages/TestFeatures';
 // router and routes
 
 const router = createBrowserRouter(
@@ -22,7 +23,7 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path="projects" element={<Projects />} />
         <Route path="learning-resources-used" element={<LearningResources />} />
-
+        <Route path="test" element={<TestFeatures />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />

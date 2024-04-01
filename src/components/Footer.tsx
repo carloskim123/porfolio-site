@@ -3,7 +3,6 @@ import { loadNewWindow } from '../../data/helpers';
 import { pg_lk } from '../../data/db';
 import "../app.css"
 
-
 const Footer = ():React.JSX.Element => {
 
     return (

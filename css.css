@@ -12,6 +12,8 @@
 
 
 
+
+
 @media(prefers-color-scheme: dark) {
     #root, html, .sidebar, .footer, .search-box, .loader-overlay {
         background: var(--dark-background-color);

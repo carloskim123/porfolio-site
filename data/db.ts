@@ -86,9 +86,9 @@ export const routes: Link[] = [
     { path: "/", pathname: "Home" },
     { path: "/projects", pathname: "Projects" },
     { path: "/learning-resources-used", pathname: "Learning Resources" },
-
     { path: "/about", pathname: "About" },
     { path: "/contact", pathname: "Contact" },
+
 ];
 
 
@@ -164,7 +164,7 @@ export const todaysGreetingSent = localStorage.getItem("todaysGreetingSent")
 export const resources = [
     {
         resource_url: 'https://www.udemy.com/course/react-the-complete-guide-incl-redux/',
-        resource_title: 'React - The Complete Guide (incl Hooks, React Router, Redux)',
+        resource_title: 'The Complete React Guide',
         resource_creator: 'Maximilian Schwarzmüller',
         resource_type: 'Online Course',
         resource_level: 'Intermediate',
@@ -175,7 +175,7 @@ export const resources = [
         resource_rating: '4.7',
         resource_reviews: '140000',
         resource_price: '$12.99',
-        resource_certification: false
+        resource_certification: "false"
     },
     {
         resource_url: 'https://www.pluralsight.com/paths/react',
@@ -190,7 +190,7 @@ export const resources = [
         resource_rating: '4.5',
         resource_reviews: '25000',
         resource_price: 'Membership Subscription',
-        resource_certification: true,
+        resource_certification: "true",
         resource_certification_title: 'Pluralsight Certificate',
         resource_certification_provider: 'Pluralsight'
     },
@@ -208,13 +208,13 @@ export const resources = [
         resource_rating: '4.7',
         resource_reviews: '220000',
         resource_price: '$12.99',
-        resource_certification: true,
+        resource_certification: "true",
         resource_certification_title: 'Certificate of Completion',
         resource_certification_provider: 'Udemy'
     },
     {
         resource_url: 'https://www.udemy.com/course/selenium-real-time-examplesinterview-questions/?couponCode=LETSLEARNNOWPP',
-        resource_title: 'Selenium WebDriver with Java -Basics to Advanced+Frameworks',
+        resource_title: 'Selenium WebDriver with Java',
         resource_creator: 'Rahul Shetty',
         resource_type: 'Online Course',
         resource_level: 'Intermediate to Advanced',
@@ -225,13 +225,13 @@ export const resources = [
         resource_rating: '4.6',
         resource_reviews: '50000',
         resource_price: '$12.99',
-        resource_certification: true,
+        resource_certification: "true",
         resource_certification_title: 'Certificate of Completion',
         resource_certification_provider: 'Udemy'
     },
     {
         resource_url: 'https://www.udemy.com/course/javascript-beginners-complete-tutorial/',
-        resource_title: 'JavaScript for Beginners - Learn JavaScript Programming',
+        resource_title: 'JavaScript for Beginners',
         resource_creator: 'John Smilga',
         resource_type: 'Online Course',
         resource_level: 'Beginner',
@@ -242,7 +242,7 @@ export const resources = [
         resource_rating: '4.8',
         resource_reviews: '180000',
         resource_price: '$12.99',
-        resource_certification: true,
+        resource_certification: "true",
         resource_certification_title: 'Certificate of Completion',
         resource_certification_provider: 'Udemy'
     },
@@ -261,6 +261,6 @@ export const resources = [
     //     resource_rating: '4.9',
     //     resource_reviews: '50000',
     //     resource_price: 'Free',
-    //     resource_certification: false
+    //     resource_certification: "false"
     // }
 ];
