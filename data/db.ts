@@ -50,11 +50,11 @@ class DirectLinks {
 
     github = "https://github.com/carloskim123";
 
-    twitter = "https://twitter.com/KimKimkirui7";
+    // twitter = "https://twitter.com/KimKimkirui7";
 
     tiktok = "https://www.tiktok.com/@carloskim456";
 
-    instagram = "https://www.instagram.com/carloskirui541/";
+    instagram = "https://www.instagram.com/somedev99/";
 }
 
 
@@ -62,18 +62,19 @@ export const dr: DirectLinks = new DirectLinks();
 
 
 export const pg_lk: Link[] = [
-    {
-        url: portfolio_url,
-        pathname: "Carlos Kirui"
-    },
+    // {
+    //     url: portfolio_url,
+    //     pathname: "Carlos Kirui"
+    // },
     {
         url: dr.github,
         pathname: "Github"
     },
+    // {
+    //     url: dr.twitter,
+    //     pathname: "Twitter"
+    // }, 
     {
-        url: dr.twitter,
-        pathname: "Twitter"
-    }, {
         url: dr.tiktok,
         pathname: "Tiktok"
     }, {

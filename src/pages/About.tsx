@@ -19,6 +19,7 @@ export default function About(): React.JSX.Element {
     <>
       <MotionWrapper>
 
+
         <Box>
           <Container maxW={{ base: '100%', md: '900px' }} textAlign="center" mt="2rem">
             <Box display="flex" justifyContent="center">
@@ -51,7 +52,9 @@ export default function About(): React.JSX.Element {
             </Accordion>
           </Container>
         </Box>
+
       </MotionWrapper>
+
 
     </>
   );

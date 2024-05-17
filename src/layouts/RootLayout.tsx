@@ -71,14 +71,14 @@ const RootLayout = () => {
       <Flex flexDirection="column" minH="100vh" cursor="auto">
 
         <Box
-          py={2}
+          py={3}
           px={4}
           h="60px"
           w={"100%"}
           top={0}
           position={"fixed"}
           zIndex={100}
-          borderBottom={"2px solid black"}
+          // borderBottom={"2px solid black"}
           backdropFilter="blur(40px)"
           background="rgba(0, 0, 0, 0.001)"
         >
@@ -87,6 +87,7 @@ const RootLayout = () => {
               <Text
                 fontSize={"20px"}
                 mt="10px"
+                marginLeft={"auto"}
                 ml={'auto'}
                 _hover={{
                   borderBottom: "2px solid black",

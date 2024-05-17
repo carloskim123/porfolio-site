@@ -45,7 +45,7 @@ export default function Loader() : React.JSX.Element {
                     />
                 </Flex>
                 <Flex mt={"1em"}>
-                    <Text>{randomQuote}</Text> {/* Display the random quote */}
+                    <Text fontSize={"15px"}>{randomQuote}</Text> {/* Display the random quote */}
                 </Flex>
             </Container>
         </Box>
