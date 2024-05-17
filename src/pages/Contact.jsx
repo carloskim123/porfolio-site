@@ -1,4 +1,4 @@
-import React, { useRef, useState} from "react";
+import React, { useRef, useState } from "react";
 import {
   Box,
   FormControl,
@@ -72,88 +72,86 @@ export default function Contact() {
     }
   };
 
-return (
-    <>
-      <MotionWrapper>
-        <Container mt={"3rem"}>
-          <Flex
-            display={"flex"}
-            justifyContent={"center"}
-            fontSize={"26px"}
-            my={"1rem"}
-          >
-            You can Contact me through the form below
-          </Flex>
-          <Box
-            maxW="md"
-            mx="auto"
-            p={4}
-            rounded="md"
-          >
-            <form onSubmit={handleSubmit} ref={form}>
-              {/* Remove isDisabled prop from input elements */}
-              <FormControl id="user_name" mb={4}>
-                <FormLabel>Name</FormLabel>
-                <Input
-                  autoComplete="on"
-                  autoFocus={true}
-                  type="text"
-                  name="user_name"
-                  borderColor="black.300"
-                  focusBorderColor="blue.400"
-                  _hover={{
-                    borderColor: "blue.400",
-                  }}
-                />
-                <Text color="red.500">{formErrors.name}</Text>
-              </FormControl>
-              <FormControl id="user_email" mb={4}>
-                <FormLabel>Email</FormLabel>
-                <Input
-                  type="email"
-                  name="user_email"
-                  borderColor="black.300"
-                  autoComplete="on"
-                  focusBorderColor="blue.400"
-                  _hover={{
-                    borderColor: "blue.400",
-                  }}
-                />
-                <Text color="red.500">{formErrors.email}</Text>
-              </FormControl>
-              <FormControl id="message" mb={4}>
-                <FormLabel>Message</FormLabel>
-                <Input
-                  as="textarea"
-                  pt={"5px"}
-                  autoCorrect="true"
-                  autoSave="true"
-                  name="message"
-                  rows={4}
-                  height={"120px"}
-                  borderColor="black.300"
-                  focusBorderColor="blue.400"
-                  _hover={{
-                    borderColor: "blue.400",
-                  }}
-                />
-                <Text color="red.500">{formErrors.message}</Text>
-              </FormControl>
+  return (
+    <MotionWrapper>
+      <Container mt={"3rem"}>
+        <Flex
+          display={"flex"}
+          justifyContent={"center"}
+          fontSize={"26px"}
+          my={"1rem"}
+        >
+          You can Contact me through the form below
+        </Flex>
+        <Box
+          maxW="md"
+          mx="auto"
+          p={4}
+          rounded="md"
+        >
+          <form onSubmit={handleSubmit} ref={form}>
+            {/* Remove isDisabled prop from input elements */}
+            <FormControl id="user_name" mb={4}>
+              <FormLabel>Name</FormLabel>
+              <Input
+                autoComplete="on"
+                autoFocus={true}
+                type="text"
+                name="user_name"
+                borderColor="black.300"
+                focusBorderColor="blue.400"
+                _hover={{
+                  borderColor: "blue.400",
+                }}
+              />
+              <Text color="red.500">{formErrors.name}</Text>
+            </FormControl>
+            <FormControl id="user_email" mb={4}>
+              <FormLabel>Email</FormLabel>
+              <Input
+                type="email"
+                name="user_email"
+                borderColor="black.300"
+                autoComplete="on"
+                focusBorderColor="blue.400"
+                _hover={{
+                  borderColor: "blue.400",
+                }}
+              />
+              <Text color="red.500">{formErrors.email}</Text>
+            </FormControl>
+            <FormControl id="message" mb={4}>
+              <FormLabel>Message</FormLabel>
+              <Input
+                as="textarea"
+                pt={"5px"}
+                autoCorrect="true"
+                autoSave="true"
+                name="message"
+                rows={4}
+                height={"120px"}
+                borderColor="black.300"
+                focusBorderColor="blue.400"
+                _hover={{
+                  borderColor: "blue.400",
+                }}
+              />
+              <Text color="red.500">{formErrors.message}</Text>
+            </FormControl>
 
-              <Button
-                colorScheme="blue"
-                size="lg"
-                w={"100%"}
-                type="submit"
-                isLoading={isSubmitted}
-                loadingText="Submitting..."
-              >
-                Submit
-              </Button>
-            </form>
-          </Box>
-        </Container>
-      </MotionWrapper>
-    </>
+            <Button
+              colorScheme="blue"
+              size="lg"
+              w={"100%"}
+              type="submit"
+              isLoading={isSubmitted}
+              loadingText="Submitting..."
+            >
+              Submit
+            </Button>
+          </form>
+        </Box>
+      </Container>
+    </MotionWrapper>
   );
 }

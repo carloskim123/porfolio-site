@@ -3,9 +3,9 @@ import { Grid, Box, Image, Link, Text, Skeleton } from "@chakra-ui/react";
 import { loadNewWindow } from "../../data/helpers";
 import { projects } from "../../data/projects_data";
 import "../../css.css";
-import { motion } from "framer-motion";
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { MotionWrapper } from "../components/Motion";
 
 // Projects component
 const Projects = () => {
@@ -23,25 +23,23 @@ const Projects = () => {
 
 
   return (
+    <MotionWrapper>
 
-    <Box>
-      <ToastContainer
-        position="bottom-left"
-        autoClose={1500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        theme="light"
-      />
+      <Box>
 
-      <motion.div
-        initial={{ opacity: 0, x: -90 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -90 }}
-      >
+        <ToastContainer
+          position="bottom-left"
+          autoClose={1500}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          theme="light"
+        />
+
+
         {/* Project grid */}
         <Grid
           key={Math.random()}
@@ -108,9 +106,9 @@ const Projects = () => {
             </div>
           ))}
         </Grid>
-      </motion.div>
+      </Box >
 
-    </Box>
+    </MotionWrapper>
 
   );
 };
