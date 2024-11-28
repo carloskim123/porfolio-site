@@ -67,10 +67,11 @@ const RootLayout = () => {
 
   // Render the RootLayout component
   return (
-    <div>
+    <div >
       <Flex flexDirection="column" minH="100vh" cursor="auto">
 
         <Box
+          mt={2}
           py={3}
           px={4}
           h="60px"
@@ -82,7 +83,7 @@ const RootLayout = () => {
           backdropFilter="blur(40px)"
           background="rgba(0, 0, 0, 0.001)"
         >
-          <Flex justifyContent={"space-between"} alignItems="center" fontSize="18px">
+          <Flex  justifyContent={"space-between"} alignItems="center" fontSize="18px">
             <Link to="/">
               <Text
                 fontSize={"20px"}

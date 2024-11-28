@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import {
   aboutMes,
   links,
-  bannerImage
+  bannerImage,
 } from "../../data/db";
 import { daytimeQuotes, nighttimeQuotes } from "../../data/quoteable";
 import {
@@ -47,6 +47,7 @@ export default function Home() {
           as="section"
           rounded="md"
           px="0px"
+          mt="3rem"
           display="flex"
           flexDir={{ base: "column", md: "column", lg: "row", sm: "column" }}
           gap="1rem"

@@ -1,9 +1,8 @@
 
-import tiktok from './icons/tiktok.svg';
 
 import instagram from './icons/instagram.svg';
 
-import twitter from './icons/twitter.svg';
+import facebook from './icons/facebook.svg';
 
 import github from './icons/github.svg';
 
@@ -11,8 +10,7 @@ import waving_hand_url from './icons/waving_hand.svg';
 
 
 export const profile_pic: string = "https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHByb2dyYW1tZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60";
-
-
+export const updated_profile_pic = "https://avatars.githubusercontent.com/u/115598773?v=4"
 export const waving_hand: string = waving_hand_url;
 
 
@@ -29,30 +27,24 @@ export const links: Link[] = [
         icon: github
     },
     {
-        url: "https://twitter.com/KimKimkirui7",
-        title: "Twitter",
-        icon: twitter
+        url: "https://www.facebook.com/profile.php?id=100089910465149",
+        title: "Facebook",
+        icon: facebook
     },
     {
         url: "https://www.instagram.com/carloskirui541/",
         title: "Instagram",
         icon: instagram
-    },
-    {
-        url: "https://www.tiktok.com/@carloskim456",
-        title: "Tiktok",
-        icon: tiktok
-    },
+    }
 ];
 
 
 class DirectLinks {
 
+
     github = "https://github.com/carloskim123";
 
-    // twitter = "https://twitter.com/KimKimkirui7";
-
-    tiktok = "https://www.tiktok.com/@carloskim456";
+    facebook = "https://www.facebook.com/profile.php?id=100089910465149";
 
     instagram = "https://www.instagram.com/somedev99/";
 }
@@ -62,21 +54,14 @@ export const dr: DirectLinks = new DirectLinks();
 
 
 export const pg_lk: Link[] = [
-    // {
-    //     url: portfolio_url,
-    //     pathname: "Carlos Kirui"
-    // },
+
     {
         url: dr.github,
         pathname: "Github"
     },
-    // {
-    //     url: dr.twitter,
-    //     pathname: "Twitter"
-    // }, 
     {
-        url: dr.tiktok,
-        pathname: "Tiktok"
+        url: dr.facebook,
+        pathname: "Facebook"
     }, {
         url: dr.instagram,
         pathname: "Instagram"
