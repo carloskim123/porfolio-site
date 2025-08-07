@@ -78,9 +78,23 @@ const LearningResources = () => {
                         </Box>
                     ))}
                 </Grid>
-                <Drawer placement={isMobile ? "bottom" : "right"} isOpen={selectedResource !== null} onClose={closeDrawer} size={isMobile ? "10%" : "lg"}>
-                    <DrawerOverlay />
-                    <DrawerContent fontSize={"18px"} borderTop={"3px solid black"} borderTopLeftRadius={"20px"} borderTopRightRadius={"20px"} color={'black'} bg={"#b0966b;"} height={{ base: "500px", lg: "100%", sm: "500px" }}>
+                <Drawer
+                
+                placement={isMobile ? "bottom" : "right"} isOpen={selectedResource !== null} onClose={closeDrawer} size={isMobile ? "10%" : "lg"}>
+                    <DrawerOverlay 
+                    
+                    />
+                    <DrawerContent 
+                        fontSize={"18px"} 
+                        // borderTop={"3px solid black"} 
+                        borderTopLeftRadius={"15px"} 
+                        borderTopRightRadius={"15px"} 
+                        // color={'black'} 
+                       
+                        // backdropFilter={"blur(50px) brightness(100%)"}
+                        // background="rgba(0, 0, 0, 0.02)"
+                        height={{ base: "500px", lg: "100%", sm: "500px" }}
+                    >
                         <DrawerHeader fontSize={"25px"} color={"gray.900"}>{selectedResource?.resource_title}</DrawerHeader>
                         <DrawerBody>
                             <Text fontWeight="bold">Creator: <Text as="span" fontWeight="normal">{selectedResource?.resource_creator}</Text></Text>

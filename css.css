@@ -1,12 +1,12 @@
 :root {
-    --light-text-color: #000;
+    --light-text-color: linear-gradient(to right, #3e3e3e 0%, #e4d6c3 100%);
     /* Default light mode text color */
-    --light-background-color: #bd7c44;
+    --light-background-color: #f5e0bc;
     /* Default light mode background color */
 
-    --dark-text-color: #000;
+    --dark-text-color: linear-gradient(to right, #3e3e3e 0%, #e4d6c3 100%);
     /* Default dark mode text color */
-    --dark-background-color: #bd7c44;
+    --dark-background-color: #f5e0bc;
     /* Default dark mode background color */
 }
 

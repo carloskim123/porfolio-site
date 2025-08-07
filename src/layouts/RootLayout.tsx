@@ -7,7 +7,6 @@ import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 
 // Import local components
-import Loader from '../components/Loader';
 import Footer from '../components/Footer';
 import { routes } from '../../data/db';
 
@@ -16,31 +15,13 @@ import "../app.css";
 import "../../css.css"
 
 const RootLayout = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime] = useState(new Date());
 
   const navigate: NavigateFunction = useNavigate();
 
 
-  // Simulate loading for 3 seconds and then set 'isLoading' to false
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-
-
-    // Update 'currentTime' every second
-    const intervalId: number = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
-
-    // Cleanup the interval when the component unmounts
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
 
   // Add event listener for window resize and call 'closeMobileMenu' function when 'showMenu' changes
   useEffect(() => {
@@ -72,7 +53,7 @@ const RootLayout = () => {
 
         <Box
           // mt={2}s
-          py={3}
+          py={7}
           px={4}
           h="60px"
           w={"100%"}
@@ -86,7 +67,7 @@ const RootLayout = () => {
           <Flex  justifyContent={"space-between"} alignItems="center" fontSize="18px" >
             <Link to="/">
               <Text
-                fontSize={"20px"}
+                fontSize={"23px"}
                 mt="10px"
                 marginLeft={"auto"}
                 ml={'auto'}
@@ -95,7 +76,7 @@ const RootLayout = () => {
                   transform: "translateY(-5px)",
                 }}
               >
-                Carlos.K
+                Carlos Kirui 👋🏽
               </Text>
             </Link>
             <Box display={{ base: "block", md: "none" }} onClick={toggleMobileMenu}>
@@ -137,7 +118,7 @@ const RootLayout = () => {
             zIndex={100}
             w="100%"
             h="100%"
-            backdropFilter={"blur(30px) brightness(110%)"}
+            backdropFilter={"blur(50px) brightness(100%)"}
             background="rgba(0, 0, 0, 0.02)"
             transition="top 450ms ease"
           >
@@ -184,9 +165,9 @@ const RootLayout = () => {
             </Box>
           </Box>
           <Box flex="1">
-            <Suspense fallback={<Loader />}>
-              {isLoading ? <Loader /> : <Outlet />}
-            </Suspense>
+            <>
+              { <Outlet />}
+            </>
           </Box>
         </Flex>
         <Footer />

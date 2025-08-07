@@ -116,7 +116,7 @@ export const aboutMes = [
         param: "Hi, I'm Carlos Kirui! 👋🏾 I like building websites and making them look good. Let's work together and create something cool! 🌟🚀"
     },
     {
-        param: "Yo! 👋🏾 Carlos Kirui here, a web developer ready to help you out. Let's build something awesome for the web! 💻✨"
+        // param: "Yo! 👋🏾 Carlos Kirui here, a web developer ready to help you out. Let's build something awesome for the web! 💻✨"
     }
 ];
 
