@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <MotionWrapper>
-      <Box ml={"-1.2rem"}>
+      <Box ml={"1vw"}>
 
         <Box
           as="section"
