@@ -201,7 +201,7 @@ const RootLayout = () => {
              
             </Box>
           </Box>
-          <Box flex="1" ml={"-1.8vw"} mr={"auto"}>
+          <Box flex="1" ml={"auto"} mr={"auto"}>
             <>
               { <Outlet />}
             </>

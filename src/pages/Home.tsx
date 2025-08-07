@@ -41,12 +41,12 @@ export default function Home() {
 
   return (
     <MotionWrapper>
-      <Box>
+      <Box ml={"-1.2rem"}>
 
         <Box
           as="section"
           rounded="md"
-          px="0px"
+          px="auto"
           mt="3rem"
           display="flex"
           flexDir={{ base: "column", md: "column", lg: "row", sm: "column" }}

@@ -81,7 +81,7 @@ export default function Contact() {
           fontSize={"26px"}
           my={"1rem"}
         >
-          Send me a greeting
+         Let's keep in touch &nbsp;[]~(￣▽￣)~* 
         </Flex>
         <Box
           maxW="md"
