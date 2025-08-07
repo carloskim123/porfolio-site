@@ -18,27 +18,6 @@ export const dev_email = "kimaccess123@gmail.com";
 
 export const portfolio_url = "https://kimk.vercel.app/";
 
-
-
-export const links: Link[] = [
-    {
-        url: "https://github.com/carloskim123",
-        title: "Github",
-        icon: github
-    },
-    {
-        url: "https://www.facebook.com/profile.php?id=100089910465149",
-        title: "Facebook",
-        icon: facebook
-    },
-    {
-        url: "https://www.instagram.com/carloskirui541/",
-        title: "Instagram",
-        icon: instagram
-    }
-];
-
-
 class DirectLinks {
 
 
@@ -51,6 +30,28 @@ class DirectLinks {
 
 
 export const dr: DirectLinks = new DirectLinks();
+
+
+export const links: Link[] = [
+    {
+        url: dr.github,
+        title: "Github",
+        icon: github
+    },
+    {
+        url: dr.facebook,
+        title: "Facebook",
+        icon: facebook
+    },
+    {
+        url: dr.instagram,
+        title: "Instagram",
+        icon: instagram
+    }
+];
+
+
+
 
 
 export const pg_lk: Link[] = [
@@ -105,9 +106,6 @@ export const bannerImage = "https://images.unsplash.com/photo-1504805572947-34fa
 
 
 export const aboutMes = [
-    // {
-    //     param: "Hey! 👋🏾 I'm Carlos Kirui, a web developer from Nairobi, Kenya. I've been coding for over 5 years and love building cool stuff for the web. Let's team up and make something awesome together! 💻🚀"
-    // },
     {
         param: "Hi there! 👋🏾 I'm Carlos Kirui, your friendly web guy. I enjoy coding and creating websites that look great and work smoothly. Let's chat and see how we can bring your ideas to life! 🌐✨"
     },
@@ -232,21 +230,4 @@ export const resources = [
         resource_certification_title: 'Certificate of Completion',
         resource_certification_provider: 'Udemy'
     },
-
-
-    // {
-    //     resource_url: 'https://www.youtube.com/playlist?list=PLuNEz8XtB51K-XAeq4GvzXn2pWI9_8xXq',
-    //     resource_title: 'React Tutorial for Beginners',
-    //     resource_creator: 'Programming with Mosh',
-    //     resource_type: 'YouTube Playlist',
-    //     resource_level: 'Beginner',
-    //     resource_description:
-    //         'This YouTube playlist provides a comprehensive tutorial for beginners to learn React.js, covering topics like components, props, state, and more.',
-    //     resource_duration: '6 hours',
-    //     resource_language: 'English',
-    //     resource_rating: '4.9',
-    //     resource_reviews: '50000',
-    //     resource_price: 'Free',
-    //     resource_certification: "false"
-    // }
 ];

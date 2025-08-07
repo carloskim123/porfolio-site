@@ -74,14 +74,14 @@ export default function Contact() {
 
   return (
     <MotionWrapper>
-      <Container mt={"3rem"}>
+      <Container mt={"6rem"}>
         <Flex
           display={"flex"}
           justifyContent={"center"}
           fontSize={"26px"}
           my={"1rem"}
         >
-          You can Contact me through the form below
+          Send me a greeting
         </Flex>
         <Box
           maxW="md"

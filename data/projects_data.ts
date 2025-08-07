@@ -15,16 +15,20 @@ export const projects: Project[] = [
     //     project_url: 'https://github.com/carloskim123/advanced-todo-app',
     //     view_live: 'https://carloskim123.github.io/advanced-todo-app/',
     //     description: "A feature-rich todo app with advanced functionality."
-    // },
-{
-        name: 'Vinly - Quote sharing application',
+    // }
+    ,
+    {
+        name: 'Java Contact List Manager (Console Application)',
         id: Math.random(),
-        img: '.Vinly_app.png',
-        tech_stack: 'Typescript, Javascript, Nodejs, Mongodb, React, HTML, CSS...',
-        project_url: 'https://github.com/carloskim123/FRONTEND',
+        img: 'https://3.bp.blogspot.com/-KIrCDuRSDdQ/WgSUMYqVWhI/AAAAAAAADxs/cbSerxnGbw05cLh1GnzQQ9ruozC9W1gJACLcBGAs/w1200-h630-p-k-no-nu/JAVA%2BContact%2BManagement%2BSystem%2BProject.png',
+        tech_stack: 'Java',
+        project_url: 'https://github.com/carloskim123/Java/blob/main/Projects/CrudApps/ContactListApp.java',
         view_live: null,
-        description: "A feature rich quote sharing application"
+        description: "A Vanilla Java project using fundamental java features."
     },
+    
+
+
     {
         name: 'Golang Rest Api',
         id: Math.random(),
@@ -34,7 +38,7 @@ export const projects: Project[] = [
         view_live: null,
         description: "A RESTful API built with Golang and Gin framework."
     },
-    {
+     {
         name: 'TicTacToe Java',
         id: Math.random(),
         img: tictactoeJava,
@@ -43,6 +47,25 @@ export const projects: Project[] = [
         view_live: null,
         description: "A tictactoe game build with SwingUI and Java"
     },
+        {
+        name: 'Shop Zetu Website (Contributed)',
+        id: Math.random(),
+        img: shopZetuVendorsBanner,
+        tech_stack: 'Javascript, Ejs',
+        project_url: 'https://github.com/carloskim123/Shop-Zetu-Vendor-Management-System-VMS-',
+        view_live: "https://shop-zetu.vercel.app/",
+        description: "Shop Zetu Vendors website based on the Organization based in Nairobi, Kenya"
+    },
+    {
+        name: 'Vinly - Quote sharing application',
+        id: Math.random(),
+        img: '.Vinly_app.png',
+        tech_stack: 'Typescript, Javascript, Nodejs, Mongodb, React, HTML, CSS...',
+        project_url: 'https://github.com/carloskim123/FRONTEND',
+        view_live: null,
+        description: "A feature rich quote sharing application"
+    },
+   
 
     {
         name: 'Itunes Clone using Itunes Api',
@@ -79,25 +102,8 @@ export const projects: Project[] = [
     //     project_url: 'https://github.com/carloskim123/Pexels-Image-Api',
     //     view_live: 'https://carloskim123.github.io/Pexels-Image-Api/',
     //     description: "An image search app built around the Pexels Api"
-    // },
-    {
-        name: 'Java Contact List Manager (Console Application)',
-        id: Math.random(),
-        img: 'https://3.bp.blogspot.com/-KIrCDuRSDdQ/WgSUMYqVWhI/AAAAAAAADxs/cbSerxnGbw05cLh1GnzQQ9ruozC9W1gJACLcBGAs/w1200-h630-p-k-no-nu/JAVA%2BContact%2BManagement%2BSystem%2BProject.png',
-        tech_stack: 'Java',
-        project_url: 'https://github.com/carloskim123/Java/blob/main/Projects/ContactListApp.java',
-        view_live: null,
-        description: "A Vanilla Java project using fundamental java features."
-    },
-    {
-        name: 'Shop Zetu Website (Contributed)',
-        id: Math.random(),
-        img: shopZetuVendorsBanner,
-        tech_stack: 'Javascript, Ejs',
-        project_url: 'https://github.com/carloskim123/Shop-Zetu-Vendor-Management-System-VMS-',
-        view_live: "https://shop-zetu.vercel.app/",
-        description: "Shop Zetu Vendors website based on the Organization based in Nairobi, Kenya"
-    },
+    // }
+
     // {
     //     name: 'Crud Operations (Exercise)',
     //     id: Math.random(),

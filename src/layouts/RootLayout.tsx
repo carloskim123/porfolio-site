@@ -81,9 +81,9 @@ const RootLayout = () => {
           zIndex={100}
           // borderBottom={"2px solid black"}
           backdropFilter="blur(40px)"
-          background="rgba(0, 0, 0, 0.001)"
+          background="rgba(0, 0, 0, 0)"
         >
-          <Flex  justifyContent={"space-between"} alignItems="center" fontSize="18px">
+          <Flex  justifyContent={"space-between"} alignItems="center" fontSize="18px" >
             <Link to="/">
               <Text
                 fontSize={"20px"}
@@ -110,7 +110,7 @@ const RootLayout = () => {
               )}
             </Box>
 
-            <Flex display={{ base: "none", md: "flex" }} gap="2rem">
+            <Flex display={{ base: "none", md: "flex", }} gap={"1rem"}>
               {routes.map(route => (
                 <Link key={route.path} to={route.path}>
                   <Text
@@ -137,24 +137,25 @@ const RootLayout = () => {
             zIndex={100}
             w="100%"
             h="100%"
-            backdropFilter="blur(2px)"
+            backdropFilter={"blur(30px) brightness(110%)"}
             background="rgba(0, 0, 0, 0.02)"
-            borderTop="2px solid #000"
             transition="top 450ms ease"
           >
             <Box
-              className="sidebar"
-              overflow="hidden"
+              // className="sidebar"
+              // overflow="hidden"
               h="80vh"
               w="100%"
               py={7}
               px={6}
               display="flex"
               flexDir="column"
-              gap=".5rem"
+              gap="1rem"
+              // backdropFilter={"blur(30px) brightness(110%)"}
+              // background="rgba(0, 0, 0, 0.02)"
             >
               <Flex>
-                <Box mr={"auto"} fontSize={"23px"}>Carlos Kirui 👋🏽<Text fontSize={"14px"}>{currentTime.toLocaleTimeString()}</Text></Box>
+                <Box mr={"auto"} fontSize={"33px"}>Carlos Kirui 👋🏽<Text fontSize={"14px"}>{currentTime.toLocaleTimeString()}</Text></Box>
                 <Box
                   onClick={closeMobileMenu}
                   cursor="pointer"
