@@ -56,7 +56,7 @@ export default function Home() {
         >
           <Flex p={{ base: "20px", md: "40px", sm: "10px" }} maxWidth="764px">
             <Box>
-              <Text fontSize={{ base: "19px", lg: "25px", md: "20x", sm: "23px" }}>{aboutMe}</Text>
+              <Text fontSize={{ base: "22px", lg: "26px", md: "22x", sm: "23px" }}>{aboutMe}</Text>
               <Flex gap="1rem" mt="1.5rem" flexWrap="wrap">
                 <Box pt="5px" fontSize="20px">
                   Check me out on:
@@ -74,8 +74,8 @@ export default function Home() {
                       rounded="md"
                       _hover={{
                         textDecoration: "underline",
-                        shadow: "sm",
-                        transition: "ease 100ms",
+                        shadow: "lg",
+                        transition: "ease 200ms",
                       }}
                     >
                       <Box display="flex" flexDir="row" justifyContent="center" gap="5px">

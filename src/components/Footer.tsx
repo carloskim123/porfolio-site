@@ -9,7 +9,7 @@ const Footer = ():React.JSX.Element => {
             py={4}
             textAlign="center"
             width="100%"
-            background="linear-gradient(to right, #fff5f5 0%, #fff5f5 100%)"
+            // background="linear-gradient(to right, #fff5f5 0%, #fff5f5 100%)"
 
         >
     
