@@ -13,7 +13,8 @@ const Footer = ():React.JSX.Element => {
             textAlign="center"
             width="100%"
             backdropFilter="blur(12px)"
-            background="rgba(0, 0, 0, 0.01)"
+            // background="rgba(0, 0, 0, 0.01)"
+            
         >
             <Box>
                 <Box>
