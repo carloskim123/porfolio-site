@@ -107,8 +107,6 @@ export const nighttimeQuotes = [
         param: "In the night's stillness, find inner peace. 🌃"
     },
     {
-    },
-    {
         param: "Silent nights hold secrets and dreams. 🌠"
     },
     {
