@@ -71,7 +71,7 @@ const RootLayout = () => {
       <Flex flexDirection="column" minH="100vh" cursor="auto">
 
         <Box
-          mt={2}
+          // mt={2}s
           py={3}
           px={4}
           h="60px"
@@ -80,7 +80,7 @@ const RootLayout = () => {
           position={"fixed"}
           zIndex={100}
           // borderBottom={"2px solid black"}
-          backdropFilter="blur(40px)"
+          backdropFilter="blur(30px)"
           background="rgba(0, 0, 0, 0)"
         >
           <Flex  justifyContent={"space-between"} alignItems="center" fontSize="18px" >
@@ -144,7 +144,7 @@ const RootLayout = () => {
             <Box
               // className="sidebar"
               // overflow="hidden"
-              h="80vh"
+              h="100vh"
               w="100%"
               py={7}
               px={6}
