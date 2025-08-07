@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
-import { Suspense } from "react";
 
 // Import local components
 import Footer from '../components/Footer';
@@ -15,7 +14,6 @@ import "../app.css";
 import "../../css.css"
 
 const RootLayout = () => {
-  const [isLoading] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
   const [currentTime] = useState(new Date());
 
