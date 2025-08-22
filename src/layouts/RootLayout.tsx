@@ -46,65 +46,9 @@ const RootLayout = () => {
   // Render the RootLayout component
   return (
     <div >
-      <Flex flexDirection="column" minH="100vh" cursor="auto">
+      {/* Mobile */}
 
-        <Box
-          // mt={2}s
-          py={5}
-          px={4}
-          h="80px"
-          w={"100%"}
-          top={0}
-          position={"fixed"}
-          zIndex={100}
-          // borderBottom={"2px solid black"}
-          backdropFilter="blur(60px)"
-          background="rgba(0, 0, 0, 0)"
-        >
-          <Flex  justifyContent={"space-between"} alignItems="center" fontSize="18px" >
-            <Link to="/">
-              <Text
-                fontSize={"30px"}
-                mt="10px"
-                marginLeft={"auto"}
-                ml={'auto'}
-                // _hover={{
-                  // transform: "translateY(-5px)",
-                // }}
-              >
-                Carlos Kirui 👋🏽
-              </Text>
-            </Link>
-            <Box display={{ base: "block", md: "none" }} onClick={toggleMobileMenu}>
-              {showMenu ? (
-                <Box onClick={closeMobileMenu}></Box>
-              ) : (
-                <Box onClick={toggleMobileMenu} _hover={{ cursor: "pointer", transform: "rotate(360deg)" }}>
-                 <svg viewBox="0 0 24 24" width={"44px"} fill="black" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 8H13.75M5 12H19M10.25 16L19 16" stroke="#464455" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                </Box>
-              )}
-            </Box>
-
-            <Flex display={{ base: "none", md: "flex", }} gap={"1rem"}>
-              {routes.map(route => (
-                <Link key={route.path} to={route.path}>
-                  <Text
-                    fontSize="25px"
-                    _hover={{
-                      transform: "translateY(-2px)",
-                      borderBottom: "1px solid black",
-                      transition: "all 100ms ease-in-out"
-                    }}
-                  >
-                    {route.pathname}
-                  </Text>
-                </Link>
-              ))}
-            </Flex>
-          </Flex>
-        </Box>
-
-        <Flex flex="1" paddingTop={"60px"} onClick={closeMobileMenu}>
+      <Flex flex="1" paddingTop={"60px"} onClick={closeMobileMenu }>
           <Box
             cursor="pointer"
             position="fixed"
@@ -118,8 +62,6 @@ const RootLayout = () => {
             transition="top 450ms ease"
           >
             <Box
-              // className="sidebar"
-              // overflow="hidden"
               h="100vh"
               w="100%"
               py={7}
@@ -127,8 +69,6 @@ const RootLayout = () => {
               display="flex"
               flexDir="column"
               gap="1rem"
-              // backdropFilter={"blur(30px) brightness(110%)"}
-              // background="rgba(0, 0, 0, 0.02)"
             >
               <Flex>
                 <Box 
@@ -146,69 +86,124 @@ const RootLayout = () => {
                   
                 </Box>
               </Flex>
-{routes.map(route => (
-  <Link
-    key={route.path}
-    to={route.path}
-    onClick={() => {
-      navigate(route.path);
-      closeMobileMenu();
-    }}
-  >
-    <Box
-      role="group"
-      display="flex"
-      alignItems="center"
-      transition="all 250ms ease-in-out"
-    >
-      <Box
-        fontSize="25px"
-        overflow="hidden"
-        width="0"
-        transition="all 250ms ease-in-out"
-        _groupHover={{
-          width: "2rem",
-        }}
-      >
-        <Text
-          transform="translateX(-2rem)"
-          opacity={0}
-          transition="all 250ms ease-in-out"
-          _groupHover={{
-            opacity: 1,
-            transform: "translateX(0)",
-          }}
-        >
-          →
-        </Text>
-      </Box>
+                  {routes.map(route => (
+                    <Link
+                      key={route.path}
+                      to={route.path}
+                      onClick={() => {
+                        navigate(route.path);
+                        closeMobileMenu();
+                      }}
+                    >
+                      <Box
+                        role="group"
+                        display="flex"
+                        alignItems="center"
+                        transition="all 250ms ease-in-out"
+                      >
+                        <Box
+                          fontSize="25px"
+                          overflow="hidden"
+                          width="0"
+                          transition="all 250ms ease-in-out"
+                          _groupHover={{
+                            width: "2rem",
+                          }}
+                        >
+                          <Text
+                            transform="translateX(-2rem)"
+                            opacity={0}
+                            transition="all 250ms ease-in-out"
+                            _groupHover={{
+                              opacity: 1,
+                              transform: "translateX(0)",
+                            }}
+                          >
+                            →
+                          </Text>
+                        </Box>
 
-      <Text
-        fontSize="25px"
-        pl="0"
-        ml="0"
-        transition="all 250ms ease-in-out"
-        _groupHover={{
-          pl: "0.5rem",
-        }}
-      >
-        {route.pathname}
-      </Text>
-    </Box>
-  </Link>
-))}
+                        <Text
+                          fontSize="25px"
+                          pl="0"
+                          ml="0"
+                          transition="all 250ms ease-in-out"
+                          _groupHover={{
+                            pl: "0.5rem",
+                          }}
+                        >
+                          {route.pathname}
+                        </Text>
+                      </Box>
+                    </Link>
+                  ))}
 
              
             </Box>
           </Box>
           <Box flex="1" ml={"auto"} mr={"auto"}>
-            <>
+            <Box>
               { <Outlet />}
-            </>
+            </Box>
           </Box>
-        </Flex>
+      </Flex> 
+
+
+
+
+
+      {/* Desktop */}
+     
+        <Box
+          py={5}
+          px={4}
+          h="80px"
+          w={"100%"}
+          top={0}
+          position={"fixed"}
+          zIndex={100}
+          backdropFilter="blur(60px)"
+          background="rgba(0, 0, 0, 0)"
+        >
+          <Flex mt={"10px"}  justifyContent={"space-between"} alignItems="center" fontSize="18px" mx={{base: "0%", sm:"0%", md: "2%", lg:"8%"}}>
+            <Link to="/" >
+              <Text
+                fontSize={"30px"}
+                marginLeft={"auto"}
+              >
+                Carlos Kirui 
+              </Text>
+            </Link>
+            <Box display={{ base: "block", md: "none", sm:"block" }} onClick={toggleMobileMenu}>
+              {showMenu ? (
+                <Box onClick={closeMobileMenu}></Box>
+              ) : (
+                <Box onClick={toggleMobileMenu} _hover={{ cursor: "pointer", transform: "rotate(360deg)" }}>
+                 <svg viewBox="0 0 24 24" width={"44px"} fill="black" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 8H13.75M5 12H19M10.25 16L19 16" stroke="#464455" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </Box>
+              )}
+            </Box>
+
+            <Flex display={{ base: "none", md: "flex", }} gap={"1rem"} >
+              {routes.map(route => (
+                <Link key={route.path} to={route.path}>
+                  <Text
+                    fontSize="25px"
+                    _hover={{
+                      transform: "translateY(-2px)",
+                      borderBottom: "1px solid black",
+                      transition: "all 100ms ease-in-out"
+                    }}
+                  >
+                    {route.pathname}
+                  </Text>
+                </Link>
+              ))}
+            </Flex>
+          </Flex>
+        </Box> 
+  
         <Footer />
-      </Flex>
     </div>
   );
 };

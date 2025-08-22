@@ -1,7 +1,7 @@
 :root {
     --light-text-color: linear-gradient(to right, #3e3e3e 0%, #e4d6c3 100%);
     /* Default light mode text color */
-    --light-background-color: #f5e0bc;
+    --light-background-color: #fdf0d5;
     /* Default light mode background color */
 
     --dark-text-color: linear-gradient(to right, #3e3e3e 0%, #e4d6c3 100%);
