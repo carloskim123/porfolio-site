@@ -85,7 +85,6 @@ export default function Contact() {
                 <Input
                   type="text"
                   name="user_name"
-                  autoComplete="on"
                   borderColor="blackAlpha.300"
                   focusBorderColor="blue.400"
                   _hover={{ borderColor: "blue.400" }}
