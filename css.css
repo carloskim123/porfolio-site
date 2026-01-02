@@ -1,33 +1,35 @@
 :root {
-    --light-text-color: linear-gradient(to right, #3e3e3e 0%, #e4d6c3 100%);
-    /* Default light mode text color */
-    --light-background-color: #fdf0d5;
-    /* Default light mode background color */
+  --light-text-color: linear-gradient(to right, #3e3e3e 0%, #e4d6c3 100%);
+  /* Default light mode text color */
+  --light-background-color: #fdf0d5;
+  /* Default light mode background color */
 
-    --dark-text-color: linear-gradient(to right, #3e3e3e 0%, #e4d6c3 100%);
-    /* Default dark mode text color */
-    --dark-background-color: #f5e0bc;
-    /* Default dark mode background color */
+  /* --dark-text-color: linear-gradient(to right, #3e3e3e 0%, #e4d6c3 100%); */
+  /* Default dark mode text color */
+  /* --dark-background-color: #f5e0bc; */
+  /* Default dark mode background color */
 }
 
-
-
-
-
-@media(prefers-color-scheme: dark) {
-    #root, html, .sidebar, .footer, .search-box, .loader-overlay {
-        background: var(--dark-background-color);
-        color: var(--dark-text-color);
-
-
-    }
+@media (prefers-color-scheme: dark) {
+  #root,
+  html,
+  .sidebar,
+  .footer,
+  .search-box,
+  .loader-overlay {
+    background: var(--light-background-color);
+    color: var(--light-text-color);
+  }
 }
 
-@media(prefers-color-scheme: light) {
-    #root, html, .sidebar, .footer, .search-box, .loader-overlay {
-        background: var(--light-background-color);
-        color: var(--light-text-color);
-    }
+@media (prefers-color-scheme: light) {
+  #root,
+  html,
+  .sidebar,
+  .footer,
+  .search-box,
+  .loader-overlay {
+    background: var(--light-background-color);
+    color: var(--light-text-color);
+  }
 }
-
-

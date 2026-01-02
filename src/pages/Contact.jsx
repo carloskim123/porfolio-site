@@ -13,6 +13,7 @@ import {
 import { useNavigate } from "react-router";
 import emailjs from "@emailjs/browser";
 import { MotionWrapper } from "../components/Motion";
+import { service, template, Fgo } from "../env/email_props";
 
 export default function Contact() {
   const form = useRef();
@@ -27,10 +28,12 @@ export default function Contact() {
   const validateForm = () => {
     const errors = {};
     if (!form.current.user_name.value.trim()) errors.name = "Name is required";
-    if (!form.current.user_email.value.trim()) errors.email = "Email is required";
+    if (!form.current.user_email.value.trim())
+      errors.email = "Email is required";
     else if (!/^\S+@\S+\.\S+$/.test(form.current.user_email.value.trim()))
       errors.email = "Invalid email format";
-    if (!form.current.message.value.trim()) errors.message = "Message is required";
+    if (!form.current.message.value.trim())
+      errors.message = "Message is required";
 
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
@@ -41,20 +44,13 @@ export default function Contact() {
     if (!validateForm()) return;
 
     setIsSubmitted(true);
-    emailjs
-      .sendForm(
-        "service_cq60crt",
-        "template_4vjr6va",
-        form.current,
-        "FgoXhK367G_Vghk5J"
-      )
-      .then(
-        () => navigate("/success"),
-        (error) => {
-          navigate("/error");
-          throw new Error(error.message);
-        }
-      );
+    emailjs.sendForm(service, template, form.current, Fgo).then(
+      () => navigate("/success"),
+      (error) => {
+        navigate("/error");
+        throw new Error(error.message);
+      }
+    );
   };
 
   return (
@@ -64,15 +60,16 @@ export default function Contact() {
         <Box textAlign="center" mb={{ base: "2rem", md: "3rem" }}>
           <Heading
             as="h1"
-            fontSize={{ base: "2xl", md: "3xl" }}
+            fontSize={{ base: "2xl", md: "4xl" }}
             fontWeight="semibold"
             mb="0.5rem"
+            fontFamily={"unset"}
           >
             Let's Keep in Touch
           </Heading>
-          <Text fontSize={{ base: "md", md: "lg" }} color="gray.600">
-            I'm always open to collaboration, questions, or just saying hi. Send me a message and
-            I’ll respond as soon as possible.
+          <Text fontSize={{ base: "xl", md: "xl" }} color="gray.600">
+            I'm always open to collaboration, questions, or just saying hi.{" "}
+            <br /> Send me a message and I’ll respond as soon as possible.
           </Text>
         </Box>
 
@@ -83,21 +80,26 @@ export default function Contact() {
               <FormControl id="user_name">
                 <FormLabel>Name</FormLabel>
                 <Input
-                  type="text"
+                  type="required"
+                  id="user_name"
+                  // type="text
                   name="user_name"
                   borderColor="blackAlpha.300"
                   focusBorderColor="blue.400"
                   _hover={{ borderColor: "blue.400" }}
                   size="md"
                   rounded="md"
-                  bg="transparent"
+                  // bg="transparent"
                 />
-                {formErrors.name && <Text color="red.500">{formErrors.name}</Text>}
+                {formErrors.name && (
+                  <Text color="red.500">{formErrors.name}</Text>
+                )}
               </FormControl>
 
               <FormControl id="user_email">
                 <FormLabel>Email</FormLabel>
                 <Input
+                  id="user_email"
                   type="email"
                   name="user_email"
                   autoComplete="on"
@@ -108,15 +110,18 @@ export default function Contact() {
                   rounded="md"
                   bg="transparent"
                 />
-                {formErrors.email && <Text color="red.500">{formErrors.email}</Text>}
+                {formErrors.email && (
+                  <Text color="red.500">{formErrors.email}</Text>
+                )}
               </FormControl>
 
               <FormControl id="message">
                 <FormLabel>Message</FormLabel>
                 <Input
+                  id="message"
                   as="textarea"
                   name="message"
-                  rows={5}
+                  rows={10}
                   borderColor="blackAlpha.300"
                   focusBorderColor="blue.400"
                   _hover={{ borderColor: "blue.400" }}
@@ -124,8 +129,11 @@ export default function Contact() {
                   rounded="md"
                   bg="transparent"
                   resize="vertical"
+                  height={"10rem"}
                 />
-                {formErrors.message && <Text color="red.500">{formErrors.message}</Text>}
+                {formErrors.message && (
+                  <Text color="red.500">{formErrors.message}</Text>
+                )}
               </FormControl>
 
               <Button

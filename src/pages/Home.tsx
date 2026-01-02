@@ -2,47 +2,48 @@ import { Image } from "@chakra-ui/image";
 import { Box, Flex, Link, Text } from "@chakra-ui/layout";
 import { Tooltip } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import {
-  aboutMes,
-  links,
-  bannerImage,
-} from "../../data/db";
+import { aboutMes, links, bannerImage } from "../../data/db";
 import { daytimeQuotes, nighttimeQuotes } from "../../data/quoteable";
 import {
   loadNewWindow,
   shuffle,
   currentDayTime,
-  getRandomFromArray
-} from '../../data/helpers';
-
+  getRandomFromArray,
+} from "../../data/helpers";
 
 import "../app.css";
 import { MotionWrapper } from "../components/Motion";
 
-
 export default function Home() {
-  const [dayPeriod, setDayPeriod]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("day");
-  const [randomQuote, setRandomQuote]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("");
-  const [aboutMe, setAboutMe]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("");
+  const [dayPeriod, setDayPeriod]: [
+    string,
+    React.Dispatch<React.SetStateAction<string>>
+  ] = useState("day");
+  const [randomQuote, setRandomQuote]: [
+    string,
+    React.Dispatch<React.SetStateAction<string>>
+  ] = useState("");
+  const [aboutMe, setAboutMe]: [
+    string,
+    React.Dispatch<React.SetStateAction<string>>
+  ] = useState("");
 
   const currentTime: number = new Date().getHours();
   const shuffledArray: unknown[] = shuffle(links);
 
-
   useEffect(() => {
     currentDayTime(setDayPeriod, currentTime);
 
-    const currentQuotesArray = dayPeriod === "night" ? nighttimeQuotes : daytimeQuotes;
+    const currentQuotesArray =
+      dayPeriod === "night" ? nighttimeQuotes : daytimeQuotes;
 
     getRandomFromArray(setRandomQuote, currentQuotesArray);
     getRandomFromArray(setAboutMe, aboutMes);
-
   }, [currentTime, dayPeriod]);
 
   return (
     <MotionWrapper>
-      <Box ml={"1vw"}>
-
+      <Box mx={{ base: "1vh", md: "7vw", sm: "1vh" }}>
         <Box
           as="section"
           rounded="md"
@@ -56,7 +57,11 @@ export default function Home() {
         >
           <Flex p={{ base: "20px", md: "40px", sm: "10px" }} maxWidth="764px">
             <Box>
-              <Text fontSize={{ base: "22px", lg: "26px", md: "22x", sm: "23px" }}>{aboutMe}</Text>
+              <Text
+                fontSize={{ base: "22px", lg: "26px", md: "22x", sm: "23px" }}
+              >
+                {aboutMe}
+              </Text>
               <Flex gap="1rem" mt="1.5rem" flexWrap="wrap">
                 <Box pt="5px" fontSize="20px">
                   Check me out on:
@@ -78,7 +83,12 @@ export default function Home() {
                         transition: "ease 200ms",
                       }}
                     >
-                      <Box display="flex" flexDir="row" justifyContent="center" gap="5px">
+                      <Box
+                        display="flex"
+                        flexDir="row"
+                        justifyContent="center"
+                        gap="5px"
+                      >
                         <Image src={link.icon} h="20px" />
                         <Text>{link.title}</Text>
                       </Box>
@@ -107,12 +117,7 @@ export default function Home() {
             <Text>{randomQuote}</Text>
           </Flex>
         </Box>
-
-
       </Box>
-
-
-
     </MotionWrapper>
   );
 }

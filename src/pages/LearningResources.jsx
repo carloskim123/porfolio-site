@@ -38,24 +38,38 @@ export default function LearningResources() {
     });
   }, []);
 
-  const shortenTitle = (title) => (title.length > 100 ? `${title.substring(0, 100)}...` : title);
+  const shortenTitle = (title) =>
+    title.length > 100 ? `${title.substring(0, 100)}...` : title;
 
   return (
     <MotionWrapper>
-      <Box mt={{ base: 10, md: 16 }} mx={{ base: "6vw", md: "3rem", lg:"9%", sm:"10vw"}}>
+      <Box
+        mt={{ base: 10, md: 16 }}
+        mx={{ base: "6vw", md: "3rem", lg: "9%", sm: "10vw" }}
+      >
         {/* Header */}
         <Box textAlign="center" mb={{ base: 6, md: 12 }}>
-          <Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }} mb={2}>
+          <Heading
+            as="h2"
+            fontFamily={"inherit"}
+            fontSize={{ base: "2xl", md: "3xl" }}
+            mb={2}
+          >
             Learning Resources
           </Heading>
           <Text fontSize={{ base: "md", md: "lg" }} color="gray.600">
-            Here are some of the tools and materials that helped me grow as a developer.
+            Here are some of the tools and materials that helped me grow as a
+            developer.
           </Text>
         </Box>
 
         {/* Resources Grid */}
         <Grid
-          templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }}
+          templateColumns={{
+            base: "1fr",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
           gap={6}
         >
           {resources.map((resource, index) => (
@@ -75,9 +89,13 @@ export default function LearningResources() {
                 transition="all 0.2s ease"
               >
                 <Text fontWeight="semibold" fontSize={{ base: "lg", md: "xl" }}>
-                  {shortenTitle(resource.resource_title)} - index {index}
+                  {shortenTitle(resource.resource_title)}
                 </Text>
-                <Text mt={2} fontSize={{ base: "sm", md: "md" }} color="gray.600">
+                <Text
+                  mt={2}
+                  fontSize={{ base: "sm", md: "md" }}
+                  color="gray.600"
+                >
                   {resource.resource_type} • {resource.resource_level}
                 </Text>
               </Box>
@@ -99,7 +117,6 @@ export default function LearningResources() {
             borderRadius={isMobile ? "20px 20px 0 0" : "0"}
             fontSize="16px"
             height={isMobile ? "50%" : "100%"}
-            
           >
             <DrawerHeader fontSize="2xl" borderBottom="1px solid black">
               {selectedResource?.resource_title}
@@ -108,39 +125,72 @@ export default function LearningResources() {
               {selectedResource && (
                 <Box lineHeight={1.7}>
                   <Text fontWeight="bold">
-                    Creator: <Text as="span" fontWeight="normal">{selectedResource.resource_creator}</Text>
+                    Creator:{" "}
+                    <Text as="span" fontWeight="normal">
+                      {selectedResource.resource_creator}
+                    </Text>
                   </Text>
                   <Text fontWeight="bold">
-                    Type: <Text as="span" fontWeight="normal">{selectedResource.resource_type}</Text>
+                    Type:{" "}
+                    <Text as="span" fontWeight="normal">
+                      {selectedResource.resource_type}
+                    </Text>
                   </Text>
                   <Text fontWeight="bold">
-                    Level: <Text as="span" fontWeight="normal">{selectedResource.resource_level}</Text>
+                    Level:{" "}
+                    <Text as="span" fontWeight="normal">
+                      {selectedResource.resource_level}
+                    </Text>
                   </Text>
                   <Text fontWeight="bold">
-                    Duration: <Text as="span" fontWeight="normal">{selectedResource.resource_duration}</Text>
+                    Duration:{" "}
+                    <Text as="span" fontWeight="normal">
+                      {selectedResource.resource_duration}
+                    </Text>
                   </Text>
                   <Text fontWeight="bold">
-                    Language: <Text as="span" fontWeight="normal">{selectedResource.resource_language}</Text>
+                    Language:{" "}
+                    <Text as="span" fontWeight="normal">
+                      {selectedResource.resource_language}
+                    </Text>
                   </Text>
                   <Text fontWeight="bold">
-                    Rating: <Text as="span" fontWeight="normal">{selectedResource.resource_rating}</Text>
+                    Rating:{" "}
+                    <Text as="span" fontWeight="normal">
+                      {selectedResource.resource_rating}
+                    </Text>
                   </Text>
                   <Text fontWeight="bold">
-                    Reviews: <Text as="span" fontWeight="normal">{selectedResource.resource_reviews}</Text>
+                    Reviews:{" "}
+                    <Text as="span" fontWeight="normal">
+                      {selectedResource.resource_reviews}
+                    </Text>
                   </Text>
                   <Text fontWeight="bold">
-                    Price: <Text as="span" fontWeight="normal">{selectedResource.resource_price}</Text>
+                    Price:{" "}
+                    <Text as="span" fontWeight="normal">
+                      {selectedResource.resource_price}
+                    </Text>
                   </Text>
                   <Text fontWeight="bold">
-                    Certification: <Text as="span" fontWeight="normal">{selectedResource.resource_certification || "N/A"}</Text>
+                    Certification:{" "}
+                    <Text as="span" fontWeight="normal">
+                      {selectedResource.resource_certification || "N/A"}
+                    </Text>
                   </Text>
                   {selectedResource.resource_certification_provider && (
                     <>
                       <Text fontWeight="bold">
-                        Certification Title: <Text as="span" fontWeight="normal">{selectedResource.resource_certification_title}</Text>
+                        Certification Title:{" "}
+                        <Text as="span" fontWeight="normal">
+                          {selectedResource.resource_certification_title}
+                        </Text>
                       </Text>
                       <Text fontWeight="bold">
-                        Certification Provider: <Text as="span" fontWeight="normal">{selectedResource.resource_certification_provider}</Text>
+                        Certification Provider:{" "}
+                        <Text as="span" fontWeight="normal">
+                          {selectedResource.resource_certification_provider}
+                        </Text>
                       </Text>
                     </>
                   )}
