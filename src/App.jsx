@@ -28,7 +28,7 @@ const router = createBrowserRouter(
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
         <Route path="success" element={<HasSubmitted />} />
-        <Route path="error" element={<div>Error</div>} />
+        <Route path="error" element={<NotFound />} />
       </Route>
     </>
   )
