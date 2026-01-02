@@ -14,6 +14,7 @@ import HasSubmitted from "./components/HasSubmitted";
 import Contact from "./pages/Contact";
 import LearningResources from "./pages/LearningResources";
 import TestFeatures from "./pages/TestFeatures";
+import Error from "./components/Error";
 // router and routes
 
 const router = createBrowserRouter(
@@ -28,7 +29,7 @@ const router = createBrowserRouter(
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
         <Route path="success" element={<HasSubmitted />} />
-        <Route path="error" element={<NotFound />} />
+        <Route path="error" element={<Error />} />
       </Route>
     </>
   )

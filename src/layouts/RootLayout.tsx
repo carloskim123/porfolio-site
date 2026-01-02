@@ -11,6 +11,7 @@ import { routes } from "../../data/db";
 // Import styling
 import "../app.css";
 import "../../css.css";
+import ScrollToTop from "../components/ScrollToTop";
 
 const RootLayout = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -142,7 +143,14 @@ const RootLayout = () => {
           </Box>
         </Box>
         <Box flex="1" ml={"auto"} mr={"auto"}>
-          <Box>{<Outlet />}</Box>
+          <Box>
+            {
+              <>
+                <ScrollToTop />
+                <Outlet />
+              </>
+            }
+          </Box>
         </Box>
       </Flex>
 
