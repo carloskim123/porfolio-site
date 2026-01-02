@@ -67,7 +67,7 @@ export default function Contact() {
           >
             Let's Keep in Touch
           </Heading>
-          <Text fontSize={{ base: "xl", md: "xl" }} color="gray.600">
+          <Text fontSize={{ base: "xl", md: "xl", sm: "md" }} color="gray.600">
             I'm always open to collaboration, questions, or just saying hi.{" "}
             <br /> Send me a message and I’ll respond as soon as possible.
           </Text>
