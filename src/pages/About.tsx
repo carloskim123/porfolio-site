@@ -42,7 +42,7 @@ export default function About(): React.JSX.Element {
               Hey, I'm Carlos, nice to meet you!
             </Text>
             <Text fontSize={{ base: '15px', md: '17px', sm:"17px" }} maxW="600px" color="gray.700">
-              I'm a 16-year-old web developer with a passion for creating and solving problems.
+              I'm a 17-year-old web developer with a passion for creating and solving problems.
               I love the challenge of finding creative solutions to complex problems, and I'm always
               looking to learn new things and improve my skills.
             </Text>
