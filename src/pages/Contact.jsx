@@ -55,7 +55,7 @@ export default function Contact() {
 
   return (
     <MotionWrapper>
-      <Container maxW="container.md" py={{ base: "4rem", md: "6rem" }}>
+      <Container maxW="container.md" px={{ base: "4rem", md: "6rem" }} pt={{base: "3rem"}}>
         {/* Header */}
         <Box textAlign="center" mb={{ base: "2rem", md: "3rem" }}>
           <Heading

@@ -60,8 +60,8 @@ export const pg_lk: Link[] = [
 ];
 
 export const routes: Link[] = [
-  { path: "/", pathname: "Home" },
-  // { path: "/projects", pathname: "Projects" },
+  // { path: "/", pathname: "Home" },
+  { path: "/work", pathname: "Work" },
   { path: "/learning-resources-used", pathname: "Learning Resources" },
   { path: "/about", pathname: "About" },
   { path: "/contact", pathname: "Contact" },

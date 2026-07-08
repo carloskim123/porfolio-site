@@ -7,12 +7,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { MotionWrapper } from "../components/Motion";
 
 const Projects = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setIsLoading(false), 1000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <MotionWrapper>
@@ -35,7 +35,7 @@ const Projects = () => {
         >
           {projects.map((project) => (
             <Box key={project.id}>
-              {!isLoading ? (
+              
                 <Box
                   onClick={() =>
                     project.view_live
@@ -91,9 +91,7 @@ const Projects = () => {
                   </Box>
                   <Text fontSize="17px">Tech Stack: {project.tech_stack}</Text>
                 </Box>
-              ) : (
-                <Skeleton height="445px" borderRadius="md" />
-              )}
+  
             </Box>
           ))}
         </Grid>

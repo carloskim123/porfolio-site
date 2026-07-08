@@ -7,7 +7,7 @@ import {
 // layouts and pages
 import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
-// import Projects from './pages/Projects';
+import Projects from './pages/Projects';
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import HasSubmitted from "./components/HasSubmitted";
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
     <>
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        {/* <Route path="projects" element={<Projects />} /> */}
+        <Route path="work" element={<Projects />} />
         <Route path="learning-resources-used" element={<LearningResources />} />
         <Route path="test" element={<TestFeatures />} />
         <Route path="about" element={<About />} />
