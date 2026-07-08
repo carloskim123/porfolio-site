@@ -3,7 +3,7 @@ export const projects: Project[] = [
   {
       name: 'Folder Organizer',
       id: Math.random(),
-      img: '../public/folder_organizer.png',
+      img: '/folder_organizer.png',
       tech_stack: 'Python, HTML, CSS, TeX',
       project_url: 'https://github.com/carloskim123/Folder-Organizer',
       view_live: '',
