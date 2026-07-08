@@ -23,6 +23,7 @@ const RootLayout = () => {
     window.addEventListener("resize", closeMobileMenu);
     // Remove event listener when the component unmounts
     return () => {
+      
       window.removeEventListener("resize", closeMobileMenu);
     };
   });
