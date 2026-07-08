@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { Grid, Box, Image, Link, Text, Skeleton } from "@chakra-ui/react";
+import { Grid, Box, Image, Link, Text } from "@chakra-ui/react";
 import { loadNewWindow } from "../../data/helpers";
 import { projects } from "../../data/projects_data";
 import { toast, ToastContainer } from "react-toastify";
